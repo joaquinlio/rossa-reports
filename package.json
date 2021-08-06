@@ -20,6 +20,7 @@
     "cross-env": "^7.0.3",
     "date-fns": "^2.16.1",
     "dotenv": "^8.2.0",
+    "esbuild-loader": "^2.13.1",
     "file-loader": "^6.2.0",
     "history": "^4.10.1",
     "html-webpack-plugin": "^4.5.1",
@@ -46,7 +47,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.config.js --color --watch",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env NODE_ENV=production PARALLEL=true webpack --config webpack.prod.config.js -p",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

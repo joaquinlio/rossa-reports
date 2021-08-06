@@ -31,7 +31,7 @@ class Home extends HomeUI {
        <Suspense fallback={<CircularProgress />}>
           
           { /* Pantalla de reseñas */ }
-          <Route exact path={ "/reviews/" } component={ ReviewsPage } />
+          <Route exact path={ "/reports/reviews/" } component={ ReviewsPage } />
 
        </Suspense>
       </Wrapper>

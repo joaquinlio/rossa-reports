@@ -34,14 +34,14 @@ const App = ({ ...props }) => {
 
             
             { /* Pantalla de login */ }
-            <Route exact path={ "/" } component={ LoginPage } /> 
+            <Route exact path={ "/reports" } component={ LoginPage } /> 
 
             { /* Pantalla de inicio */ }
-            <Route path={ "/reviews" } component={ HomePage } />
+            <Route path={ "/reports/reviews" } component={ HomePage } />
 
             {	/* Verifica si hay un usuario */}
             {	user === null &&
-              <Route render={ () => <Redirect to="/" /> }  />
+              <Route render={ () => <Redirect to="/reports" /> }  />
             }
           </Suspense>
       </Switch>

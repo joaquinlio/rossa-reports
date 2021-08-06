@@ -26,7 +26,7 @@ class ReviewsModel {
       dateTo = dateTo.format( "YYYYMMDD" )
 
       // Respuesta
-      return await request.get(`http://localhost:3001/reviews?store=${user.store}&dateFrom=${dateFrom}&dateTo=${dateTo}`);
+      return await request.get(`${process.env.BACKEND_API}/reviews?store=${user.store}&dateFrom=${dateFrom}&dateTo=${dateTo}`);
       
     } catch (error) {
       
@@ -50,7 +50,7 @@ class ReviewsModel {
       const request = new Requests();
 
       // Respuesta
-      return await request.get(`http://localhost:3001/reviews/${id}`);
+      return await request.get(`${process.env.BACKEND_API}/reviews/${id}`);
       
     } catch (error) {
       

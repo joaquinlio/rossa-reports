@@ -25,7 +25,7 @@ class LoginModel {
       const request = new Requests();
 
       // Respuesta
-      return await request.post(`http://localhost:3001/auth/login`, data);
+      return await request.post(`${process.env.BACKEND_API}/auth/login`, data);
       
     } catch (error) {
       

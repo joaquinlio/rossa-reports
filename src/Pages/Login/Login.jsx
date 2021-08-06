@@ -28,6 +28,7 @@ import Loading from './SubComponents/Loader/Loader';
 import food from "../../assets/img/food.webp"
 import food2 from "../../assets/img/food2.webp"
 import food3 from "../../assets/img/food3.jpg"
+
 /**
  * @desc Contenedor de la pantalla de login.
  */
@@ -49,15 +50,7 @@ class Login extends LoginUI{
             loading = false
 
         } = this.state;
-
-		// Imagenes de fondo
-		const images = [
-			"https://www.pastarossa.com.ar/wp-content/uploads/2015/09/home-slider-1.jpg",
-			"https://www.pastarossa.com.ar/wp-content/uploads/2015/09/home-slider-3.jpg",
-			"https://www.pastarossa.com.ar/wp-content/uploads/2015/09/home-slider-4.jpg",
-			"https://www.pastarossa.com.ar/wp-content/uploads/2015/09/home-slider-5.jpg",
-		];
-
+	
 		return (
 			<Root>
 

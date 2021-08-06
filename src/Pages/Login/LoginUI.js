@@ -272,20 +272,20 @@ class LoginUI extends Component{
 
 		try{
 
-		// Alias de las propiedades
-		const { history = {} } = this.props;
+			// Alias de las propiedades
+			const { history = {} } = this.props;
 
-		// Redireccionamos.
-		history.push( uri );
+			// Redireccionamos.
+			history.push( uri );
 
-		return true;
+			return true;
 
 		}catch( error ){
 
-		// Logueamos el error.
-		console.log( error );
+			// Logueamos el error.
+			console.log( error );
 
-		return false;
+			return false;
 
 		}
 
@@ -307,7 +307,7 @@ class LoginUI extends Component{
 
 			// Alias del estado
 			let { errorSet = {} } = this.state;
-			console.log(status)
+			
 			// Verificamos si los datos suministrados son correctos.
 			if( status === 401 ){
 
