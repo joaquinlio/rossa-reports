@@ -39,6 +39,9 @@ export const QUALIFICATIONS = {
 
 // Locales
 export const STORES = {
-    ADROGUE: "ADROGUE",
-    ALL: "ALL" 
+    "ADROGUE": "ADROGUE",
+    "LOMITAS": "LOMITAS",
+    "LANUS": "LANUS",
+    "CANNING": "CANNING",
+    "RAMOS MEJIA": "RAMOS MEJIA"
 };

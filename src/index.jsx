@@ -21,7 +21,7 @@ import { Store, History } from './Config/Store';
 ReactDOM.render(
   <MuiPickersUtilsProvider libInstance={ Moment } utils={ MomentUtils } locale={ "es" }>
     <Provider store={ Store }>
-      <BrowserRouter injectFirst>
+      <BrowserRouter basename="reports" injectFirst>
         <App  history={ History }/>
       </BrowserRouter>
     </Provider>

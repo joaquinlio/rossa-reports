@@ -20,6 +20,11 @@ import NavBar from './Subcomponents/NavBar/NavBar';
 import { Root, Main } from "./Wrapper.styles"
 
 /**
+ * @desc Acciones
+ */
+ import { Logout } from '../../Actions/LoginActions';
+
+/**
  * Componente
  */
 class Wrapper extends Component {
@@ -40,7 +45,20 @@ class Wrapper extends Component {
     }
   }
 
- 
+  // Evento para limpiar sessionStorage y redireccionar al login
+  Logout = () => {
+
+    // Alias de las props
+    const { history = () => {}, dispatch = () => {}, location } = this.props;
+
+    // Evento para limpiar sessionstorage y redux
+    dispatch( Logout() );
+    
+    // Redireccionamos
+    if(location.pathname !== "/")
+      history.push("/login");
+
+  }
  
   render() {
 

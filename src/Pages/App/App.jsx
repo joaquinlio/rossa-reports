@@ -11,6 +11,8 @@ import ThemeDefault from "../../Utils/theme";
 // Layout
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { ThemeProvider } from "@material-ui/core/styles";
+import Wrapper from "../../Components/Wrapper/Wrapper";
+
 
 /**
  * @desc Utilidades
@@ -20,7 +22,6 @@ import { ThemeProvider } from "@material-ui/core/styles";
 // Componenetes
 const HomePage    = lazy(() => import("../Home/Home"));
 const LoginPage    = lazy(() => import("../Login/Login"));
-
 
 const App = ({ ...props }) => {
 
@@ -34,14 +35,15 @@ const App = ({ ...props }) => {
 
             
             { /* Pantalla de login */ }
-            <Route exact path={ "/reports" } component={ LoginPage } /> 
+            <Route exact path={ "/login" } component={ LoginPage } /> 
 
-            { /* Pantalla de inicio */ }
-            <Route path={ "/reports/reviews" } component={ HomePage } />
+            { /* Pantalla de inicio */ }            
+            <Route path={ "/reviews" } component={ HomePage } />
+            
 
             {	/* Verifica si hay un usuario */}
             {	user === null &&
-              <Route render={ () => <Redirect to="/reports" /> }  />
+              <Route render={ () => <Redirect to="/login" /> }  />
             }
           </Suspense>
       </Switch>

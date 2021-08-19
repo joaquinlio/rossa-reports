@@ -55,7 +55,7 @@ if( process.env.MODE === "custom" ){
     "BACKEND_API": process.env.BACKEND_API,
     "BACKEND_API_EXPRESSION": process.env.BACKEND_API_EXPRESSION,
     "BACKEND_VERSION": process.env.BACKEND_VERSION,
-    "BASE_URL": process.env.BASE_URL
+    "BASE_URL": "https://pastarossa.nicolasaugustolio.com.ar/reports"
   };
 
   // Reemplazamos las variables del prod.env por las de linea de comando
@@ -117,7 +117,7 @@ module.exports = {
     /**
      * @desc Carpeta publica
      */
-    publicPath: process.env.BASE_URL + "/"
+    publicPath: "https://pastarossa.nicolasaugustolio.com.ar/reports" + "/"
 
   },
 

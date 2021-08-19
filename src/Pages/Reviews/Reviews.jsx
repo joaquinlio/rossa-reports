@@ -113,11 +113,13 @@ class Reviews extends ReviewsController {
               whiteSpace: 'nowrap',
               flexWrap: 'nowrap',
           },
-          lookup: {
-            "ADROGUE": "Adrogue",
-            "LOMAS": "Lomas de zamora",
-            "LANUS": "Lanus"
-          },
+          lookup: function(){
+            let stores = {};
+            for( let store of Object.keys( STORES ) ){
+                stores[store] = Capitalize( store );
+            }
+            return stores;
+          }(),
           customSort:( a, b ) => orderData(a?.store, b?.store)
         }
       )
