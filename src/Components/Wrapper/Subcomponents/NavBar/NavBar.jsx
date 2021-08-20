@@ -33,7 +33,7 @@ function NavBar({ ...props }) {
 
     } = props;
 
-    const { user, Logout } = props;
+    const { user, logout } = props;
 
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -44,7 +44,7 @@ function NavBar({ ...props }) {
     // Desloguea al usuario y cierra el menu
     const handleClose = () => {
       setAnchorEl(null);
-      Logout();
+      logout();
     };
 
     // Redirecciona a la url y cierra el menu

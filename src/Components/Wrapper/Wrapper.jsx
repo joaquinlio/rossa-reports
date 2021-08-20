@@ -46,17 +46,16 @@ class Wrapper extends Component {
   }
 
   // Evento para limpiar sessionStorage y redireccionar al login
-  Logout = () => {
-
+  logout = () => {
+    console.log("entra aca")
     // Alias de las props
     const { history = () => {}, dispatch = () => {}, location } = this.props;
 
     // Evento para limpiar sessionstorage y redux
     dispatch( Logout() );
     
-    // Redireccionamos
-    if(location.pathname !== "/")
-      history.push("/login");
+    // Redireccionamos   
+    history.push("/login");
 
   }
  
@@ -69,7 +68,7 @@ class Wrapper extends Component {
         <Root>
           <CssBaseline />
           {/* NavBar */}
-          <NavBar setOpenLogin={this.setOpenLogin} user={user} Logout={this.Logout} history={ this.props.history }/>
+          <NavBar setOpenLogin={this.setOpenLogin} user={user} logout={this.logout} history={ this.props.history }/>
                        
           <Main>
             {

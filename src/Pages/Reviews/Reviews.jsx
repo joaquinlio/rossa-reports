@@ -45,6 +45,11 @@ import ReviewsController from "./ReviewsController";
  */
 import { QUALIFICATIONS, STORES } from "../../Utils/Constants"
 
+/**
+ * @desc Utilidades
+ */
+ import { Capitalize } from "../../Utils/String";
+
 class Reviews extends ReviewsController {
 
   orderData = (a, b) => {
