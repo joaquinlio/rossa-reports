@@ -61,11 +61,11 @@ class Wrapper extends Component {
   }
  
   render() {
-
+    
     // Alias de las propiedades 
     let { user }= this.props;
 
-    return (      
+    return location.pathname !== "/reports/login" && (      
         <Root>
           <CssBaseline />
           {/* NavBar */}

@@ -38,7 +38,7 @@ const App = ({ ...props }) => {
             <Route exact path={ "/login" } component={ LoginPage } /> 
 
             { /* Pantalla de inicio */ }            
-            <Route path={ "/reviews" } component={ HomePage } />
+            <Route path={ "/" } component={ HomePage } />
             
 
             {	/* Verifica si hay un usuario */}

@@ -246,7 +246,7 @@ class LoginUI extends Component{
 			dispatch( Login( body ) ); 
 	
 			// Redireccionamos al dashboard.
-			this.redirect("/reviews")
+			this.redirect("/")
 
 			return true;
 
