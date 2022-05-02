@@ -24,3 +24,8 @@ yarn-error.log*
 
 .vercel
 .netlify
+
+dev.env
+prod.env
+package-lock.json
+yarn.lock

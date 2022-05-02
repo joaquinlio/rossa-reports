@@ -8,28 +8,26 @@ import Requests from "../Utils/Requests";
  */
 
 class ReviewsModel {
-    
-    /**
+  /**
    * @desc Obtiene las reseñas
    *
    * @return { Promise }
    */
-  static async getReviews({ dateFrom, dateTo}, user) {
+  static async getReviews({ dateFrom, dateTo }, user) {
     try {
-
       // Requester
       const request = new Requests();
 
       // Fechas formateadas
-      dateFrom = dateFrom.format( "YYYYMMDD" )
+      dateFrom = dateFrom.format("YYYYMMDD");
 
-      dateTo = dateTo.format( "YYYYMMDD" )
+      dateTo = dateTo.format("YYYYMMDD");
 
       // Respuesta
-      return await request.get(`${process.env.BACKEND_API}/reviews?store=${user.store}&dateFrom=${dateFrom}&dateTo=${dateTo}`);
-      
+      return await request.get(
+        `${process.env.BACKEND_API}/reviews?store=${user.store}&dateFrom=${dateFrom}&dateTo=${dateTo}`
+      );
     } catch (error) {
-      
       console.log(error);
 
       return false;
@@ -43,22 +41,18 @@ class ReviewsModel {
    *
    * @return { Promise }
    */
-   static async getReview(id) {
+  static async getReview(id) {
     try {
-
       // Requester
       const request = new Requests();
 
       // Respuesta
       return await request.get(`${process.env.BACKEND_API}/reviews/${id}`);
-      
     } catch (error) {
-      
       console.log(error);
 
       return false;
     }
   }
-
 }
 export default ReviewsModel;
